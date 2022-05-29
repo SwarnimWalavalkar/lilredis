@@ -1,8 +1,22 @@
 [package]
 name = "lilredis"
-version = "0.1.0"
+version = "1.0.0"
 edition = "2021"
+repository = "https://github.com/SwarnimWalavalkar/lilredis"
+homepage = "https://swarnimwalavalkar.com/experiments/lilredis"
+authors = ["Swarnim Walavalkar <swarnim.walavalkar@gmail.com>"] 
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+crc = "1.7"
+byteorder = "1.2"
+serde = "1"
+serde_derive = "1"
+
+[lib]
+name = "liblilredis"
+path = "src/lib.rs"
+
+[[bin]]
+name = "lilredis"
+path = "src/lilredis.rs"
